@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html	lang	=	"en">
 	<head>
+        <link   href    =   "css/colors_and_backgrounds.css"
+                rel     =   "stylesheet"
+                type    =   "text/css"/>
+        <link   href    =   "css/structure.css"
+                rel     =   "stylesheet"
+                type    =   "text/css"/>
 		<meta 	charset	=	"UTF-8" />
 	</head>
 	<body>
