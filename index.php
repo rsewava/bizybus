@@ -1,3 +1,6 @@
+<?php
+	require_once "require/db_config.php";
+?>
 <!DOCTYPE html>
 <html	lang	=	"en">
 	<head>
@@ -60,9 +63,6 @@
 				</ul>
 			</nav>
 		</header>
-<?php
-$total_visits
-?>
 		<main>
 			<div>
 				Stop Looking.
@@ -70,6 +70,30 @@ $total_visits
 				The fututre of bus transport in Uganda starts with Bizybus.
 				We are Uganda's Largest online bus booking platform and are trusted by over x users. 
 			</div>
+			<form		action	=	""
+					method	=	"">
+				<label		for	=	"origin">
+					Start:
+				</label>
+				<input		id	=	"origin"
+						list	=	"start"
+						name	=	"origin"/>
+				<datalist	id	=	"start">
+					<option		value	=	"Edge"/>
+					<option		value	=	"Firefox"/>
+				</datalist>
+				<label		for	=	"destination">
+					Destination:
+				</label>
+				<input		id	=	"destination"
+						list	=	"end"
+						name	=	"destination"/>
+				<datalist	id	=	"end">
+					<option		value	=	"Edge"/>
+					<option		value	=	"Firefox"/>
+				</datalist>
+				<input		type	=	"submit">
+			</form>
 		</main>
 		<footer>
 			
