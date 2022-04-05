@@ -79,8 +79,18 @@
 						list	=	"start"
 						name	=	"origin"/>
 				<datalist	id	=	"start">
-					<option		value	=	"Edge"/>
-					<option		value	=	"Firefox"/>
+<?php
+	$query			=	"SELECT `id`, `place` FROM `places` ORDER BY `place` ASC";
+    	$statement_handler	=	$DB_connection_handler->prepare($query);
+    	$statement_handler->execute();
+    	$start			=	$statement_handler->fetchAll(PDO::FETCH_ASSOC);
+    	foreach ($start as $row => $option)
+    	{
+?>
+					<option		value	=	"<?php echo $option['place'];?>"/>
+<?php
+	}
+?>
 				</datalist>
 				<label		for	=	"destination">
 					Destination:
@@ -89,8 +99,18 @@
 						list	=	"end"
 						name	=	"destination"/>
 				<datalist	id	=	"end">
-					<option		value	=	"Edge"/>
-					<option		value	=	"Firefox"/>
+<?php
+	$query			=	"SELECT `id`, `place` FROM `places` ORDER BY `place` ASC";
+    	$statement_handler	=	$DB_connection_handler->prepare($query);
+    	$statement_handler->execute();
+    	$end			=	$statement_handler->fetchAll(PDO::FETCH_ASSOC);
+    	foreach ($end as $row 	=> $option)
+    	{
+?>
+					<option		value	=	"<?php echo $option['place'];?>"/>
+<?php
+	}
+?>
 				</datalist>
 				<input		type	=	"submit">
 			</form>
